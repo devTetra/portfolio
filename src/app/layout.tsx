@@ -4,7 +4,7 @@ import "./globals.css";
 import { Loader } from "@/components/ui/Loader";
 import { loaderInitScript } from "@/lib/loader-init";
 
-const siteUrl = "https://your-domain.com";
+const siteUrl = "https://treasureejike.vercel.app";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -23,18 +23,17 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  // Basic information
   metadataBase: new URL(siteUrl),
 
   title: {
     default: "Treasure Chinemerem Ejike | Software Engineer",
-    template: "%s | Treasure Chinemerem Ejike",
+    template: "%s | Treasure Ejike",
   },
 
   description:
     "Treasure Chinemerem Ejike is a Software Engineer with experience in frontend and backend development, building functional web applications with React, TypeScript, Node.js, and MongoDB.",
 
-  applicationName: "Treasure Chinemerem Ejike",
+  applicationName: "Treasure Ejike Portfolio",
 
   authors: [
     {
@@ -44,16 +43,15 @@ export const metadata: Metadata = {
   ],
 
   creator: "Treasure Chinemerem Ejike",
+
   publisher: "Treasure Chinemerem Ejike",
 
   category: "technology",
 
-  // Canonical URL
   alternates: {
     canonical: "/",
   },
 
-  // Search engine instructions
   robots: {
     index: true,
     follow: true,
@@ -66,21 +64,17 @@ export const metadata: Metadata = {
     },
   },
 
-  // Open Graph: WhatsApp, LinkedIn, Facebook, etc.
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_NG",
     url: siteUrl,
-    siteName: "Treasure Chinemerem Ejike",
-
+    siteName: "Treasure Ejike",
     title: "Treasure Chinemerem Ejike | Software Engineer",
-
     description:
       "Building functional web applications across the frontend and backend through thoughtful engineering and clean implementation.",
-
     images: [
       {
-        url: "/og-image.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Treasure Chinemerem Ejike — Software Engineer",
@@ -88,16 +82,12 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Twitter / X sharing
   twitter: {
     card: "summary_large_image",
-
     title: "Treasure Chinemerem Ejike | Software Engineer",
-
     description:
       "Building functional web applications across the frontend and backend through thoughtful engineering and clean implementation.",
-
-    images: ["/og-image.png"],
+    images: ["/images/og-image.png"],
   },
 
   referrer: "strict-origin-when-cross-origin",
@@ -112,17 +102,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-
-  themeColor: [
-    {
-      media: "(prefers-color-scheme: light)",
-      color: "#F8F8F5",
-    },
-    {
-      media: "(prefers-color-scheme: dark)",
-      color: "#151515",
-    },
-  ],
+  colorScheme: "light dark",
+  themeColor: "#F0F0EB",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

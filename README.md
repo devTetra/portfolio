@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Treasure Ejike — Developer Portfolio
+
+A personal portfolio showcasing my work, experience, technical skills, and background as a Software Engineer.
+
+**Live Website:** [treasureejike.vercel.app](https://treasureejike.vercel.app/)
+
+## Overview
+
+This portfolio serves as a central place to explore my projects, learn about my experience, and get in touch.
+
+It features a responsive layout, light and dark themes, and dedicated sections for selected projects, skills, professional experience, and contact information.
+
+## Built With
+
+- **Next.js** — React framework
+- **React** — UI development
+- **TypeScript** — Type safety
+- **Tailwind CSS** — Styling
+- **Zustand** — Theme state management
+
+## Features
+
+- Responsive design across different screen sizes
+- Light and dark theme switching
+- Persistent theme preference
+- Selected projects with live demos and source code
+- Professional experience and skills sections
+- Contact and social links
+- SEO and social sharing metadata
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/devTetra/YOUR-REPOSITORY-NAME.git
+```
+
+Navigate into the project directory:
+
+```bash
+cd YOUR-REPOSITORY-NAME
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+src/
+└── app/
+    ├── components/
+    ├── globals.css
+    ├── layout.tsx
+    └── page.tsx
 
-## Learn More
+public/
+└── images/
+    ├── favicons/
+    └── projects/
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The portfolio is deployed on [Vercel](https://vercel.com/).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Portfolio:** [treasureejike.vercel.app](https://treasureejike.vercel.app/)
+- **GitHub:** [devTetra](https://github.com/devTetra)
+- **LinkedIn:** [Treasure Ejike](https://www.linkedin.com/in/treasure-ejike)
+- **Email:** tre.ejike@gmail.com
