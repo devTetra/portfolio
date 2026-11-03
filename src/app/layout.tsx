@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       "Building functional web applications across the frontend and backend through thoughtful engineering and clean implementation.",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/images/og-image-v2.png",
         width: 1200,
         height: 630,
         alt: "Treasure Chinemerem Ejike — Software Engineer",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title: "Treasure Chinemerem Ejike | Software Engineer",
     description:
       "Building functional web applications across the frontend and backend through thoughtful engineering and clean implementation.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image-v2.png"],
   },
 
   referrer: "strict-origin-when-cross-origin",
