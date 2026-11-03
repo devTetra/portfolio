@@ -1,0 +1,16 @@
+{
+  "name": "Treasure Chinemerem Ejike | Software Engineer",
+  "short_name": "Treasure Ejike",
+  "description": "Personal portfolio of Treasure Chinemerem Ejike, Software Engineer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F8F5",
+  "theme_color": "#F8F8F5",
+  "icons": [
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

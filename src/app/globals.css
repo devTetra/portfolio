@@ -1,26 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Makes the dark: variant follow the data-theme attribute */
+/* @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *)); */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:root {
+  /* color-scheme: light; */
+  --bg: #F8F8F5;
+  --surface: #F0F0EB;
+  --border: #E8E8E2;
+  --fg: #151515;
+  --muted: #5B5B55;
+  --primary: #C8381C;
+  --on-primary: #FFFFFF;
+  --available: #1F9D55;
+  --surface-strong: #E8E8E2;
+}
+
+[data-theme="dark"] {
+  /* color-scheme: dark; */
+  --bg: #151515;
+  --surface: #1C1C1B;
+  --border: #2B2B2A;
+  --fg: #F2F2EE;
+  --muted: #A3A39C;
+  --primary: #FF7A5C;
+  --on-primary: #151515;
+  --available: #34C26F;
+  --surface-strong: #242423;
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-available: var(--available);
+  --color-surface-strong: var(--surface-strong);
+
+  --font-display: var(--font-instrument-serif), serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --animate-pulse-ring: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--available) 50%, transparent);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px color-mix(in oklab, var(--available) 0%, transparent);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--available) 0%, transparent);
+  }
+}
+
+/* globals.css */
+
+/* 1. Apply transition to EVERYTHING that needs to fade in (Main content + Navbar) */
+main>*,
+[data-navbar] {
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 2. Hide EVERYTHING while the loader is running */
+html[data-loader="running"] main>*,
+html[data-loader="running"] [data-navbar] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 3. Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+
+  main>*,
+  [data-navbar] {
+    transition: none;
+  }
 }
